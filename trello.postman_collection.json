@@ -1,0 +1,1123 @@
+{
+	"info": {
+		"_postman_id": "26481c2e-7fb3-4208-ba1e-ed76ee89ea58",
+		"name": "trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30974412",
+		"_collection_link": "https://grey-escape-65114.postman.co/workspace/6120862f-680e-465e-b8d3-d8bb9457110e/collection/30974412-26481c2e-7fb3-4208-ba1e-ed76ee89ea58?action=share&source=collection_link&creator=30974412"
+	},
+	"item": [
+		{
+			"name": "Utworzenie tablicy",
+			"item": [
+				{
+					"name": "Create a new board",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"New board is created\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"new_board_id\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{basedUrl}}/1/boards/?name=Projekt&key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Projekt"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a board by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/boards/{{new_board_id}}?key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"{{new_board_id}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all boards",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/members/me/boards?key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"members",
+								"me",
+								"boards"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dodanie trzech nowych list",
+			"item": [
+				{
+					"name": "Create a new list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"New list is created\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"new_list_1\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/boards/{{new_board_id}}/lists?name=wakacje&key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"{{new_board_id}}",
+								"lists"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "wakacje"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new list 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"New list is created\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"new_list_2\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/boards/{{new_board_id}}/lists?name=wakacje2&key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"{{new_board_id}}",
+								"lists"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "wakacje2"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new list 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"New list is created\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"new_list_3\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/boards/{{new_board_id}}/lists?name=wakacje3&key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"{{new_board_id}}",
+								"lists"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "wakacje3"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all lists on a board",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/boards/{{new_board_id}}/lists?key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"boards",
+								"{{new_board_id}}",
+								"lists"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zaktualizowanie nazwy listy",
+			"item": [
+				{
+					"name": "Update name of list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"List name is changed\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/lists/{{new_list_1}}?key={{key}}&token={{token}}&name=na wczoraj",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"{{new_list_1}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "na wczoraj"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zamknięcie/archiwizacja listy",
+			"item": [
+				{
+					"name": "Archive/close list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"List is closed\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/lists/{{new_list_2}}/closed?key={{key}}&token={{token}}&value=true",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"{{new_list_2}}",
+								"closed"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "value",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dodanie pięciu nowych kart",
+			"item": [
+				{
+					"name": "Add new card",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"New card is created\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"new_card_1\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/cards?idList={{new_list_3}}&key={{key}}&token={{token}}&name=odpoczynek&desc=mazury",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "{{new_list_3}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "odpoczynek"
+								},
+								{
+									"key": "desc",
+									"value": "mazury"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new card 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"New card is created\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"new_card_2\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/cards?idList={{new_list_3}}&key={{key}}&token={{token}}&name=rozwoj&desc=warsztaty",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "{{new_list_3}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "rozwoj"
+								},
+								{
+									"key": "desc",
+									"value": "warsztaty"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new card 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"New card is created\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"new_card_3\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/cards?idList={{new_list_3}}&key={{key}}&token={{token}}&name=nauka&desc=hiszpanski",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "{{new_list_3}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "nauka"
+								},
+								{
+									"key": "desc",
+									"value": "hiszpanski"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new card 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"New card is created\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"new_card_4\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/cards?idList={{new_list_3}}&key={{key}}&token={{token}}&name=wyjscia&desc=mecz",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "{{new_list_3}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "wyjscia"
+								},
+								{
+									"key": "desc",
+									"value": "mecz"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new card 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"New card is created\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"new_card_5\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/cards?idList={{new_list_2}}&key={{key}}&token={{token}}&name=short brake&desc=Londyn",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "{{new_list_2}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "short brake"
+								},
+								{
+									"key": "desc",
+									"value": "Londyn"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get cards on list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/lists/{{new_list_2}}/cards?key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"lists",
+								"{{new_list_2}}",
+								"cards"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Aktualizacja nazwy karty",
+			"item": [
+				{
+					"name": "Update name of card",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"List card is changed\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/cards/{{new_card_3}}?key={{key}}&token={{token}}&name=aktywnosc",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{new_card_3}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "aktywnosc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usunięcie karty",
+			"item": [
+				{
+					"name": "Delete card",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Card is deleted\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/cards/{{new_card_4}}?key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{new_card_4}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify if card is deleted",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/cards/{{new_card_4}}?key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{new_card_4}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Archiwizacja karty",
+			"item": [
+				{
+					"name": "Close/archive card",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Card is closed\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/cards/{{new_card_5}}?key={{key}}&token={{token}}&closed=true",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{new_card_5}}"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "closed",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Przenoszenie kart",
+			"item": [
+				{
+					"name": "Move card to another list",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Card moved to another list\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/cards/{{new_card_2}}?idList={{new_list_1}}&key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{new_card_2}}"
+							],
+							"query": [
+								{
+									"key": "idList",
+									"value": "{{new_list_1}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Utworzenie checklisty",
+			"item": [
+				{
+					"name": "Create checklist on card",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Checklist is created\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/checklists?idCard={{new_card_2}}&key={{key}}&token={{token}}&name=do zabrania",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"checklists"
+							],
+							"query": [
+								{
+									"key": "idCard",
+									"value": "{{new_card_2}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								},
+								{
+									"key": "name",
+									"value": "do zabrania"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Weryfikacja dodania checklisty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{basedUrl}}/1/cards/{{new_card_2}}/checklists?key={{key}}&token={{token}}",
+							"host": [
+								"{{basedUrl}}"
+							],
+							"path": [
+								"1",
+								"cards",
+								"{{new_card_2}}",
+								"checklists"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
