@@ -3,6 +3,7 @@
 ## Test cases:
 
 * [Test cases for an online store skleptest.pl](https://docs.google.com/spreadsheets/d/1aezW3ZMlp9CTxjuVvqVE4gdo77uo3bVtkGKGvGzZeWM/edit?usp=sharing)
+* [Test cases for the KanbanBoard application](https://github.com/ewewis/Test-Cases-for-the-KanbanBoard-Application)
 
 ## Exploratory testing:
 
