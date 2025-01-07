@@ -1,5 +1,9 @@
 # PORTFOLIO:
 
+## Bug report:
+
+* <a href="https://github.com/ewewis/Projects/blob/main/B%C5%82%C4%85d_rejestracja_konta.png">Bug report in Jira regarding account registration with an incorrect email address.</a> 
+
 ## Test cases:
 
 * [Test cases for an online store skleptest.pl](https://docs.google.com/spreadsheets/d/1aezW3ZMlp9CTxjuVvqVE4gdo77uo3bVtkGKGvGzZeWM/edit?usp=sharing)
