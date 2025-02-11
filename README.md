@@ -19,14 +19,18 @@
 ## Automated tests:
 *  <a href= "https://github.com/ewewis/Cypress-Automated-Tests-Online-Shop">Automated tests in Cypress for an online store</a>
 
+## HTML, CSS:
+* <a href="https://github.com/ewewis/projekt_1">Project HTML i CSS</a>
+
+## Mind map:
+* <a href="https://github.com/ewewis/Mind-map">Mind Map for online store</a>
+
 ## Figma moodboard:
 *  <a href="https://github.com/ewewis/Projects/blob/main/Figma%20moodboard.jpeg">Example of a moodboard in Figma</a> 
 
 ## Figma style guide:
 * <a href="https://github.com/ewewis/Projects/blob/main/style_guide.png">Style Guide for a Travel Agency</a>
 
-## HTML, CSS:
-* <a href="https://github.com/ewewis/projekt_1">Project HTML i CSS</a> 
   
 
 
