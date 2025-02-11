@@ -1,20 +1,23 @@
 # PORTFOLIO:
 
 ## Bug report:
+* <a href="https://github.com/ewewis/Projects/blob/main/B%C5%82%C4%85d_rejestracja_konta.png">Bug report in Jira regarding account registration with an incorrect email address.</a>
 
-* <a href="https://github.com/ewewis/Projects/blob/main/B%C5%82%C4%85d_rejestracja_konta.png">Bug report in Jira regarding account registration with an incorrect email address.</a> 
+## WorldOfBugs
+*  <a href="https://github.com/ewewis/WorldOfBugs">Bugs found on the internet</a> 
 
 ## Test cases:
-
 * [Test cases for an online store skleptest.pl](https://docs.google.com/spreadsheets/d/1aezW3ZMlp9CTxjuVvqVE4gdo77uo3bVtkGKGvGzZeWM/edit?usp=sharing)
 * [Test cases for the KanbanBoard application](https://github.com/ewewis/Test-Cases-for-the-KanbanBoard-Application)
 
 ## Exploratory testing:
-
 * [Exploratory Testing of the PomodoroKanban Application](https://docs.google.com/spreadsheets/d/1pr78JFAi4NwQuodpkvfiDAnRzc44jUIV5QxOplTD9Ck/edit?gid=1483414671#gid=1483414671)
 
 ## Postman collection:
 *  <a href="https://github.com/ewewis/trello_postman_collection/blob/main/README.md">Trello REST API testing with Postman</a>
+
+## Automated tests:
+*  <a href= "https://github.com/ewewis/Cypress-Automated-Tests-Online-Shop">Automated tests in Cypress for an online store</a>
 
 ## Figma moodboard:
 *  <a href="https://github.com/ewewis/Projects/blob/main/Figma%20moodboard.jpeg">Example of a moodboard in Figma</a> 
