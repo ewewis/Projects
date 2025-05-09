@@ -33,7 +33,7 @@ There is no error message indicating that the field contains invalid characters.
 The message: **"Your phone number may only contain digits"** does not appear.
 
 ## Attachment
-[Screenshot of the bug](https://drive.google.com/drive/u/0/folders/1m8eoSTIBNOKE4Gzzzpl1g6c-0fn3Efgj?ths=true)
+[Screenshot of the bug](https://github.com/ewewis/Projects/blob/main/ID_01.png)
 
 ## Priority
 **Low/Medium**
