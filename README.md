@@ -1,6 +1,7 @@
 # PORTFOLIO:
 
 ## Bug report:
+* <a href="https://github.com/ewewis/Projects/blob/main/digital-accessibility-bug.md">Digital accessibility bug.</a>
 * <a href="https://github.com/ewewis/Projects/blob/main/B%C5%82%C4%85d_rejestracja_konta.png">Bug report in Jira regarding account registration with an incorrect email address.</a>
 * <a href="https://github.com/ewewis/Projects/blob/main/bug-report-Jutro%20Medical-web%20app.md">Bug Report for the Jutro Medical Web Application.</a>
 
