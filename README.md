@@ -22,6 +22,9 @@
 ## Automated tests:
 *  <a href= "https://github.com/ewewis/Cypress-Automated-Tests-Online-Shop">Automated tests in Cypress for an online store</a>
 
+## SOC for E-commerce Platform:
+* <a href="https://github.com/ewewis/soc-ecommerce-security-concept">SOC ecommerce security concept</a>
+
 ## HTML, CSS:
 * <a href="https://github.com/ewewis/projekt_1">Project HTML i CSS</a>
 
