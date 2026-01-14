@@ -25,6 +25,9 @@
 ## SOC for E-commerce Platform:
 * <a href="https://github.com/ewewis/soc-ecommerce-security-concept">SOC ecommerce security concept</a>
 
+## DevTools:
+* <a href="https://github.com/ewewis/devtools-in-qa-testing">DevTools Presentation</a>
+
 ## HTML, CSS:
 * <a href="https://github.com/ewewis/projekt_1">Project HTML i CSS</a>
 
