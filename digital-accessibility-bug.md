@@ -27,7 +27,7 @@ The user has not previously accepted cookies or enters the site in incognito/pri
 - The cookie banner covers the content, and it is not possible to accept or close it using the keyboard.
 
 **Attachment:**  
-(https://github.com/ewewis/Projects/blob/main/ID_01_brak%20mo%C5%BCliwo%C5%9Bci%20zaakceptowania%20ciasteczek.mp4)
+[Screen recording of the error](https://github.com/ewewis/Projects/blob/main/ID_01_brak%20mo%C5%BCliwo%C5%9Bci%20zaakceptowania%20ciasteczek.mp4)
 
 **Reported by:** Ewelina Wisińska  
 **Date:** 11.09.2025
